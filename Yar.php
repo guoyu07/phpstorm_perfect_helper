@@ -188,7 +188,7 @@ class Yar_Concurrent_Client
     static $_error_callback;
 
     /**
-     * 重置call
+     * Clean all registered calls
      */
     public static function reset{}
 
@@ -199,13 +199,13 @@ class Yar_Concurrent_Client
      * @param callable $callback 优先级高于loop中的callback
      * @param callable $error_callback 优先级高于loop中的error_callback
      */
-    public static function call($uri, $method, $parameters, callable $callback='',callable $error_callback='') { }
+    public static function call($uri, $method, $parameters,[ callable $callback [, callable $error_callback ]] ) { }
 
     /**
      * @param callable $callback
      * @param callable $error_callback
      */
-    public static function loop(callable $callback='', callable $error_callback='') { }
+    public static function loop([ callable $callback [, callable $error_callback ]] ) { }
 }
 
 /**
