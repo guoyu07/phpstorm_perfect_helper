@@ -1,7 +1,7 @@
 <?php
 /**
- * phpstormHelperPerfect
- *
+ * phpstorm_perfect_helper
+ *jetbrains idea phpstorm helper &&php_perfect_helper
  * 本文件使用方式：
  *
  * Yaf开发，在IDE中打开/导入本文件即可
@@ -24,17 +24,18 @@
  * Start xhprof profiling.
  *
  * @link http://php.net/manual/en/function.xhprof-enable.php
- *
- * @param int   $flags   <p>Optional flags to add additional information to the profiling. See the a
- *                       href="http://php.net/manual/en/xhprof.constants.php">XHprof constants</a> for further
- *                       information about these flags, e.g., <strong>XHPROF_FLAGS_MEMORY</strong> to enable memory
- *                       profiling.</p>
- * @param array $options <p>An array of optional options, namely, the 'ignored_functions' option to pass in functions
- *                       to be ignored during profiling.</p>
- *
- * @return null
+ * @param int   $flags  [optional] <p>
+ * Optional flags to add additional information to the profiling. See the a
+ * href="http://php.net/manual/en/xhprof.constants.php">XHprof constants</a> for further
+ * information about these flags, e.g., <strong>XHPROF_FLAGS_MEMORY</strong> to enable memory
+ * profiling.
+ *</p>
+ * @param array $options[optional]<p>
+ * An array of  optional options, namely, the 'ignored_functions' option to pass in functions
+ * to be ignored during profiling.</p>
+ * @return void 
  */
-function xhprof_enable( $flags = 0, array $options )
+function xhprof_enable($flags = 0, $options)
 {
 }
 
@@ -90,9 +91,9 @@ const XHPROF_FLAGS_CPU = 2;
 const XHPROF_FLAGS_MEMORY = 4;
 const XHPROF_SAMPLING_INTERVAL=100000;
 const XHPROF_MAX_IGNORED_FUNCTIONS=256;
-const XHPROF_IGNORED_FUNCTION_FILTER_SIZE=XHPROF_MAX_IGNORED_FUNCTIONS + 7)/8;
 const XHPROF_VERSION='0.9.4';
 const XHPROF_MODE_HIERARCHICAL=1;
-constXHPROF_MODE_SAMPLED=620002;
+const XHPROF_MODE_SAMPLED=620002;
+const XHPROF_IGNORED_FUNCTION_FILTER_SIZE=(XHPROF_MAX_IGNORED_FUNCTIONS + 7)/8;
 
 // End of xhprof v.0.9.4

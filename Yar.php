@@ -1,7 +1,7 @@
 <?php
 /**
- * phpstormHelperPerfect
- *
+ * phpstorm_perfect_helper
+ *jetbrains idea phpstorm helper &&php_perfect_helper
  * 本文件使用方式：
  *
  * Yaf开发，在IDE中打开/导入本文件即可
@@ -190,22 +190,31 @@ class Yar_Concurrent_Client
     /**
      * Clean all registered calls
      */
-    public static function reset{}
-
+    public static function reset(){}
     /**
      * @param $uri
      * @param $method
      * @param $parameters
-     * @param callable $callback 优先级高于loop中的callback
-     * @param callable $error_callback 优先级高于loop中的error_callback
+     * @param callable $callback [optional] <p>
+     * 优先级高于loop中的callback
+     * </p>
+     * @param callable $error_callback [optional] <p>
+     * 优先级高于loop中的error_callback
+     * </p>
      */
-    public static function call($uri, $method, $parameters,[ callable $callback [, callable $error_callback ]] ) { }
+    public static function call($uri, $method, $parameters,$callback='callback', $error_callback='callback') { }
 
     /**
-     * @param callable $callback
-     * @param callable $error_callback
+     * @param callable $callback [optional] <p>
+     * The function to be called.
+     * 统一回调函数
+     * </p>
+     * @param callable $error_callback [optional] <p>
+     * The function to be called.
+     * 统一错误回调函数
+     * </p>
      */
-    public static function loop([ callable $callback [, callable $error_callback ]] ) { }
+    public static function loop($callback='callback', $error_callback='callback'){ }
 }
 
 /**

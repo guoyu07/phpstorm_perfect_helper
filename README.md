@@ -2,8 +2,8 @@
 phpstorm_perfect_helper   phpstorm 提示完善工具
 ```
 /**
- * phpstormHelperPerfect
- *
+ * phpstorm_perfect_helper
+ *jetbrains idea phpstorm helper &&php_perfect_helper
  * 本文件使用方式：
  *
  * Yaf开发，在IDE中打开/导入本文件即可
