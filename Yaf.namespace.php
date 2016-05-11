@@ -173,13 +173,15 @@ namespace Yaf {
          * (Yaf >= 2.3.5)
          * 构造函数，根据配置初始化Application
          *
-         * @param mixed $config 关联数组的配置, 或者一个指向ini格式的配置文件的路径的字符串.
-         *                      如果是一个ini配置文件，那配置文件中应该有一个定义了yaf.environ 的配置节.这个在生产环境中是默认的.
-         *                      如果你使用了ini配置文件作为你应用配置的容器，你需要打开yaf.cache_config 来提升性能.
-         * @param string $section 加载的配置节点，使用该节点的配置初始化应用.
+         * @param mixed $config [required] <p>
+         * 关联数组的配置, 或者一个指向ini格式的配置文件的路径的字符串.
+         * 如果是一个ini配置文件，那配置文件中应该有一个定义了yaf.environ 的配置节.这个在生产环境中是默认的.
+         * 如果你使用了ini配置文件作为你应用配置的容器，你需要打开yaf.cache_config 来提升性能.
+         * </p>
+         * @param string $environ [optional] 加载的配置节点，使用该节点的配置初始化应用.
          * @return Application
          */
-        public function __construct($config, $section = 'product') { }
+        public function __construct($config, $environ = 'product') { }
 
         /**
          * (Yaf >= 2.3.5)
